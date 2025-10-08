@@ -70,7 +70,7 @@ ul li {
 }
 
 .slides img {
-  width: 100%;
+  width: 90%;
   display: none;
   cursor: pointer;
   transition: opacity 0.5s ease-in-out;
@@ -126,7 +126,7 @@ ul li {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #25D366 url('WhatsApp.png') center/contain no-repeat;
+  background: #25D366 url('whatsapp.png') center/contain no-repeat;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -155,7 +155,7 @@ ul li {
 
 #lightbox img {
   width: 90%;
-  height: 70%;
+  height: 90%;
   object-fit: contain;
   border-radius: 10px;
 }
