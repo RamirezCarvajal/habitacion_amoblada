@@ -126,7 +126,7 @@ ul li {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #25D366 url('img/whatsapp.png') center/contain no-repeat;
+  background: #25D366 url('whatsapp.png') center/contain no-repeat;
   width: 60px;
   height: 60px;
   border-radius: 50%;
