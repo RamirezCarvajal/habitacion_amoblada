@@ -1,0 +1,271 @@
+/* ===== ESTILOS BASE ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; 
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin-top: .5rem;
+  font-size: 1.2rem;
+}
+
+section {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #4CAF50;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: #fff;
+  margin: .5rem 0;
+  padding: .8rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ===== CARRUSEL ===== */
+.carousel {
+  position: relative;
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.carousel h3 {
+  text-align: center;
+  background: #4CAF50;
+  color: white;
+  padding: 0.5rem;
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.slides img {
+  width: 100%;
+  display: none;
+  cursor: pointer;
+  transition: opacity 0.5s ease-in-out;
+  object-fit: cover;
+}
+
+/* ===== BOTONES ===== */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.8rem;
+  border: none;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  user-select: none;
+  transition: background 0.3s;
+}
+
+.prev:hover, .next:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* ===== PUNTOS ===== */
+.dots {
+  text-align: center;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+.dots span {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 3px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dots .active {
+  background-color: #4CAF50;
+}
+
+/* ===== WHATSAPP ===== */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366 url('img/whatsapp.png') center/contain no-repeat;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.3s;
+}
+
+.whatsapp:hover {
+  transform: scale(1.1);
+}
+
+/* ===== LIGHTBOX ===== */
+#lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+#lightbox img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+#lightbox .close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Flechas del lightbox */
+.light-prev, .light-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 0 1rem;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.light-prev:hover, .light-next:hover {
+  background: rgba(255,255,255,0.5);
+}
+
+.light-prev { left: 40px; }
+.light-next { right: 40px; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  .carousel {
+    max-width: 95%;
+  }
+
+  .carousel h3 {
+    font-size: 1.1rem;
+  }
+
+  .prev, .next {
+    font-size: 1.2rem;
+    padding: 0.6rem;
+  }
+
+  .light-prev, .light-next {
+    font-size: 2.2rem;
+  }
+
+  #lightbox img {
+    width: 95%;
+    height: auto;
+  }
+
+  #lightbox .close {
+    top: 15px;
+    right: 25px;
+    font-size: 30px;
+  }
+
+  .whatsapp {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  .prev, .next {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .light-prev, .light-next {
+    font-size: 1.8rem;
+  }
+
+  #lightbox img {
+    width: 100%;
+  }
+
+  .whatsapp {
+    width: 45px;
+    height: 45px;
+  }
+}
